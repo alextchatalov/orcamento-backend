@@ -1,0 +1,6 @@
+com/orcamento/OrcamentoApplication.class
+com/orcamento/config/MongoConfig.class
+com/orcamento/MongoConnect.class
+com/orcamento/repository/RendaRepository.class
+com/orcamento/domain/Renda.class
+com/orcamento/controller/RendaController.class
