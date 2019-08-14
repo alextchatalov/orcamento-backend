@@ -21,7 +21,7 @@ public class RendaController {
     RendaService service;
 
     @GetMapping(value = "/rendas")
-    public @ResponseBody List<Renda> getRendas() {
+    public List<Renda> getRendas() {
         System.out.println(service.getRendas().size());
         List<Renda> rendas = new ArrayList<>();
         rendas.add( Renda.builder().id("1").renda("teste").valor(BigDecimal.ONE).build());

@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 
 @AllArgsConstructor
 @Builder
+@Getter
 @Document(collection = "renda")
 public class Renda {
     @Id
