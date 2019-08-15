@@ -11,9 +11,13 @@ import java.util.List;
 public class RendaService {
 
     @Autowired
-    private RendaBusiness rendaBusiness;
+    private RendaBusiness business;
 
     public List<Renda> getRendas() {
-        return rendaBusiness.getRendas();
+        return business.getRendas();
+    }
+
+    public Renda saveRenda(Renda renda) {
+        return business.salvarAtualizarRenda(renda);
     }
 }

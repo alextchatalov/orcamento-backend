@@ -20,7 +20,7 @@ public class MongoConfig extends AbstractMongoConfiguration {
     @Override
     public MongoClient mongoClient() {
         MongoClientURI uri = new MongoClientURI(
-                "mongodb+srv://root:<password>@cluster0-cbawx.mongodb.net/test?retryWrites=true&w=majority");
+                "mongodb+srv://root:WffLkSi9m8dOtVU1@orcamento-cbawx.mongodb.net/test?retryWrites=true&w=majority");
 
         MongoClient mongoClient = new MongoClient(uri);
         MongoDatabase database = mongoClient.getDatabase("test");
