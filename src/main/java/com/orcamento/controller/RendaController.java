@@ -16,37 +16,17 @@ public class RendaController {
     @Autowired
     RendaService service;
 
-    @GetMapping(value = "/rendas")
+    @GetMapping("/rendas")
     public List<Renda> getRendas() {
         return service.getRendas();
     }
 
-    @PostMapping(value = "/rendas")
+    @PostMapping("/rendas")
     @ResponseStatus(HttpStatus.CREATED)
-    public Renda saveRenda(@RequestBody RendaDTO rendaDTO) {
-        System.out.println("Salvando Renda!" + rendaDTO.getRenda());
-        Renda renda = Renda.builder().renda(rendaDTO.getRenda()).valor(new BigDecimal(rendaDTO.getValor())).build();
+    public Renda saveRenda(Renda rendaResquest) {
+        System.out.println("Salvando Renda!" + rendaResquest.getRenda());
+        Renda renda = Renda.builder().renda(rendaResquest.getRenda()).valor(rendaResquest.getValor()).build();
         return service.saveRenda(renda);
     }
 
-    public class RendaDTO {
-        private String renda;
-        private String valor;
-
-        public String getRenda() {
-            return renda;
-        }
-
-        public void setRenda(String renda) {
-            this.renda = renda;
-        }
-
-        public String getValor() {
-            return valor;
-        }
-
-        public void setValor(String valor) {
-            this.valor = valor;
-        }
-    }
 }
